@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개인정보처리방침 — 별짓</title>
+<meta name="description" content="별짓(Byeoljit)이 Gmail·Google Calendar 정보에 접근하고, 사용·저장·외부 전달·보존·삭제하는 방식과 연결 해제 방법을 설명합니다.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="./">별짓</a>
+  <nav><a href="./">소개</a><a href="privacy.html" aria-current="page">개인정보처리방침</a></nav>
+</div></header>
+<main><div class="wrap">
+  <h1>개인정보처리방침</h1>
+  <p class="meta">시행일 2026년 10월 11일 · 별짓(Byeoljit)</p>
+
+  <p>별짓은 한 사람이 자신의 Mac에서 직접 실행해 쓰는 개인용 업무 보조 앱입니다. 이 문서는 별짓이 사용자의 Google 계정(Gmail, Google Calendar) 정보를 어떻게 다루는지를 실제 동작 그대로 설명합니다.</p>
+  <div class="note">
+    <b>먼저 알아 둘 점</b>
+    <ul>
+      <li>별짓은 사용자의 Mac에서 실행됩니다. 별짓의 개발자가 운영하는 서버는 없으며, 개발자는 사용자의 Google 데이터를 받거나 수집하지 않습니다.</li>
+      <li>다만 "외부로 전혀 나가지 않는다"는 뜻은 아닙니다. 업무를 처리하는 AI 모델은 외부 AI 제공자가 운영하므로, 처리에 필요한 메일·일정 내용이 그 제공자에게 전달됩니다(4항).</li>
+      <li>별짓에는 메일을 보내는 기능이 없습니다. 메일은 초안까지만 만듭니다.</li>
+    </ul>
+  </div>
+
+  <h2>1. 접근하는 정보와 요청 권한</h2>
+  <p>사용자가 별짓의 설정 화면에서 Google 계정을 직접 연결하고 Google의 동의 화면에서 허용한 경우에만 접근합니다. 요청하는 권한은 다음 네 가지입니다.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>권한(범위)</th><th>별짓이 실제로 하는 일</th></tr></thead>
+    <tbody>
+      <tr><td><code>gmail.readonly</code></td><td>메일 검색, 메일·대화(스레드) 본문과 머리글(보낸 사람·받는 사람·제목·날짜) 읽기, 첨부 파일의 <b>이름</b> 확인, 라벨 목록과 초안 목록·내용 보기, 연결된 계정의 메일 주소 확인. 첨부 파일의 내용은 내려받지 않습니다.</td></tr>
+      <tr><td><code>gmail.compose</code></td><td>메일 <b>초안 만들기</b>(받는 사람·제목·본문). 이 권한은 Google의 정의상 메일 발송도 허용하지만, 별짓에는 발송 기능이 구현되어 있지 않아 발송하지 않습니다. 메일 삭제나 라벨 변경도 하지 않습니다.</td></tr>
+      <tr><td><code>calendar.events</code></td><td>일정 조회·검색(제목, 시간, 장소, 설명, 참석자), 일정 만들기와 수정. 일정에 참석자를 넣은 경우에만 Google이 그 참석자에게 초대·변경 메일을 보냅니다. 일정 삭제는 하지 않습니다.</td></tr>
+      <tr><td><code>calendar.calendarlist.readonly</code></td><td>사용자의 캘린더 목록(이름, 접근 권한) 보기.</td></tr>
+    </tbody>
+  </table></div>
+  <p>별짓은 Google 계정의 비밀번호를 받지 않습니다. 로그인과 동의는 Google의 화면에서 이루어집니다.</p>
+
+  <h2>2. 사용 목적</h2>
+  <p>접근한 정보는 <b>사용자가 요청한 업무를 처리하는 데에만</b> 사용합니다. 예: 받은 메일을 요약하거나 답장 초안을 쓰는 일, 일정을 확인하거나 등록·수정하는 일.</p>
+  <ul>
+    <li>접근은 사용자가 업무를 요청했을 때(또는 사용자가 직접 만들어 둔 예약 업무가 실행될 때) 그 업무에 필요한 만큼 이루어집니다. 그 밖에, 연결 상태를 보여 주기 위해 연결된 계정의 메일 주소와 캘린더 목록을 조회합니다. 메일함이나 캘린더를 주기적으로 통째로 복제하거나 동기화하지 않습니다.</li>
+    <li>쓰기 작업(초안 만들기, 일정 만들기·수정)은 사용자가 그때 승인했거나 설정에서 미리 허용해 둔 범위 안에서만 실행합니다.</li>
+    <li>광고, 프로필 작성, 판매, 통계 분석 목적으로 사용하지 않습니다.</li>
+  </ul>
+
+  <h2>3. 저장 위치와 저장되는 내용</h2>
+  <p>아래 정보는 모두 <b>사용자의 Mac 안</b>에 저장됩니다. 별짓이 운영하는 클라우드 저장소나 서버는 없습니다.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>저장되는 것</th><th>위치</th></tr></thead>
+    <tbody>
+      <tr><td>Google 접근 토큰·갱신 토큰, OAuth 클라이언트 ID와 보안 비밀</td><td>macOS 로그인 키체인(서비스 이름 <code>byeoljit</code>). 데이터베이스·로그·브라우저에는 저장하지 않습니다.</td></tr>
+      <tr><td>연결된 계정의 메일 주소, 동의 시각과 허용된 권한 범위, 캘린더 이름과 ID</td><td>별짓의 로컬 데이터베이스(<code>data/byeoljit.sqlite</code>)</td></tr>
+      <tr><td>업무 처리 중 Google에서 읽어 온 내용의 기록 — 도구 호출마다 요청 값과 응답(메일 본문·일정 내용 등, 호출당 최대 약 2만 자)</td><td>로컬 데이터베이스의 도구 호출 기록·실행 기록</td></tr>
+      <tr><td>승인 요청에 표시된 내용(만들려던 초안의 받는 사람·제목·본문, 일정 내용)</td><td>로컬 데이터베이스의 승인 기록</td></tr>
+      <tr><td>대화와 업무 결과(AI 직원이 쓴 요약·답변에 메일·일정 내용이 포함될 수 있음), 사용자가 저장을 요청한 문서</td><td>로컬 데이터베이스와 로컬 작업 폴더(<code>workspace/</code>)</td></tr>
+      <tr><td>데이터베이스 백업본</td><td>로컬 폴더 <code>data/backups/</code>(위 기록의 사본이 포함됩니다)</td></tr>
+      <tr><td>AI 실행 도구의 세션 기록(모델과 주고받은 내용, 도구 응답 포함)</td><td>사용자의 Mac에 있는 해당 도구의 폴더(<code>~/.claude</code>, <code>~/.codex</code>). 각 도구가 직접 관리합니다.</td></tr>
+    </tbody>
+  </table></div>
+  <p>별짓의 화면은 이 Mac 안(<code>127.0.0.1</code>)에서만 열리며, 접속 토큰이 있어야 사용할 수 있습니다. 로컬 데이터베이스와 파일은 별짓이 따로 암호화하지 않으므로, 보호 수준은 사용자 Mac의 계정·디스크 보호 설정에 따릅니다.</p>
+
+  <h2>4. 외부로 전달되는 경우</h2>
+  <p>별짓은 Google 사용자 데이터를 판매하거나 광고 목적으로 제3자에게 제공하지 않습니다. 다음의 경우에는 업무 처리를 위해 데이터가 사용자의 Mac 밖으로 전달됩니다.</p>
+  <h3>Google</h3>
+  <p>메일·일정을 읽고 초안·일정을 만들기 위해 Google의 Gmail API, Google Calendar API와 직접 통신합니다.</p>
+  <h3>AI 모델 제공자</h3>
+  <p>업무를 처리하는 AI 직원은 외부 제공자의 모델로 동작합니다. 직원 설정에 따라 <b>Anthropic(Claude)</b> 또는 <b>OpenAI(Codex/GPT)</b>의 모델이 사용되며, 사용자의 Mac에 로그인되어 있는 사용자 본인의 계정으로 호출됩니다. AI 직원이 업무를 위해 읽은 메일 본문·머리글, 일정 내용, 그리고 사용자의 요청과 대화 내용이 처리를 위해 그 제공자에게 전송됩니다. 전송된 내용의 보관과 이용은 각 제공자의 약관·개인정보처리방침과 사용자가 그 계정에 설정한 내용에 따릅니다.</p>
+  <ul>
+    <li>Google 접근 토큰, 갱신 토큰, OAuth 클라이언트 보안 비밀은 AI 제공자에게 전달하지 않습니다.</li>
+    <li>별짓은 Google 사용자 데이터를 AI 모델의 학습에 사용하지 않습니다. 제공자가 전송받은 내용을 어떻게 취급하는지는 위와 같이 각 제공자의 정책과 사용자의 계정 설정에 따릅니다.</li>
+  </ul>
+  <h3>사용자가 지시한 다른 서비스</h3>
+  <p>사용자가 별짓에 연결해 둔 다른 서비스(예: 문서 도구)에 내용을 저장하라고 요청하면, 그 요청에 따라 해당 내용이 그 서비스로 전송됩니다.</p>
+  <h3>알림</h3>
+  <p>사용자가 브라우저 알림을 켠 경우, 업무 완료·승인 요청 알림(업무 제목 등 짧은 문구)이 브라우저의 푸시 서비스를 거쳐 사용자의 기기로 전달됩니다. 알림 내용은 기기에서만 풀 수 있도록 암호화해 보냅니다.</p>
+  <p>그 밖에 사용자 데이터를 별짓의 개발자나 다른 제3자에게 보내는 기능(분석 도구, 광고, 원격 수집)은 없습니다.</p>
+
+  <h2>5. 보존 기간</h2>
+  <p>별짓은 저장된 기록을 자동으로 삭제하지 않습니다. 3항의 기록은 사용자가 직접 삭제할 때까지 사용자의 Mac에 남습니다. Google 접근 토큰은 짧은 시간마다 만료되며, 갱신 토큰으로 자동 갱신됩니다(연결을 해제하거나 Google에서 접근 권한을 삭제할 때까지).</p>
+
+  <h2>6. 연결 해제와 데이터 삭제</h2>
+  <h3>연결 해제</h3>
+  <ol>
+    <li><b>별짓에서</b>: 설정 › 외부 서비스 › Gmail(또는 Google Calendar) › [연결 해제]. 이 Mac의 키체인에 저장된 Google 접근 토큰과 갱신 토큰이 삭제되고, 별짓은 더 이상 해당 계정에 접근할 수 없습니다. OAuth 클라이언트 ID·보안 비밀은 설정 › 외부 서비스 › Google OAuth 클라이언트 › [등록 지우기]로 삭제합니다.</li>
+    <li><b>Google에서</b>: 별짓의 연결 해제는 Google 쪽의 허용을 자동으로 취소하지 않습니다. <a href="https://myaccount.google.com/connections" rel="noopener">Google 계정 › 서드 파티 앱 및 서비스</a>에서 별짓을 찾아 [모든 연결 삭제]를 눌러야 Google 쪽 권한이 취소됩니다.</li>
+  </ol>
+  <h3>저장된 데이터 삭제</h3>
+  <p><b>연결을 해제해도 이미 저장된 기록(3항의 도구 호출 기록, 승인 기록, 대화, 문서, 백업)은 자동으로 삭제되지 않습니다.</b> 다음 방법으로 삭제합니다.</p>
+  <ul>
+    <li><b>대화 지우기</b>(채팅방 메뉴): 그 방의 메시지와 이어지던 AI 대화 세션 연결을 삭제합니다. 업무·도구 호출·승인 기록은 남습니다.</li>
+    <li><b>채팅방 영구 삭제</b>(채팅방을 휴지통으로 옮긴 뒤 설정 › 휴지통에서 영구 삭제): 그 방의 메시지, 업무, 실행 기록, 도구 호출 기록, 승인 기록, 결과물 파일을 삭제합니다.</li>
+    <li><b>전체 삭제</b>: 별짓을 종료한 뒤 별짓 폴더의 <code>data/</code>(데이터베이스와 백업)와 <code>workspace/</code>를 삭제하고, macOS의 "키체인 접근" 앱에서 서비스 이름이 <code>byeoljit</code>인 항목을 삭제합니다.</li>
+    <li><b>AI 도구의 세션 기록</b>: <code>~/.claude</code>, <code>~/.codex</code> 폴더의 세션 기록은 각 도구가 관리하므로 해당 폴더에서 직접 삭제합니다. AI 제공자 쪽에 보관된 내용은 각 제공자의 계정 설정과 절차에 따라 삭제를 요청합니다.</li>
+  </ul>
+  <p>Gmail의 초안과 Calendar의 일정처럼 별짓이 Google 계정 안에 만든 항목은 Google에 저장되어 있으므로, Gmail과 Google Calendar에서 직접 삭제합니다.</p>
+
+  <h2>7. Google API 서비스 사용자 데이터 정책</h2>
+  <p>별짓이 Google API에서 받은 정보를 사용하고 다른 앱으로 전달하는 방식은 <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API 서비스 사용자 데이터 정책</a>(제한적 사용 요건 포함)을 따릅니다.</p>
+  <ul>
+    <li>Google 사용자 데이터는 사용자에게 보이는 별짓의 기능(메일 확인·초안 작성, 일정 조회·등록·수정)을 제공하는 데에만 사용합니다.</li>
+    <li>4항에 적은 경우 — 사용자가 요청한 기능을 제공하기 위해 필요한 전달 — 외에는 다른 곳으로 전달하지 않습니다.</li>
+    <li>광고 목적으로 사용하지 않으며, 판매하지 않습니다.</li>
+    <li>별짓의 개발자를 포함해 사용자 본인이 아닌 사람이 사용자의 Google 데이터를 열람하지 않습니다. 데이터가 사용자의 Mac에만 저장되기 때문입니다.</li>
+  </ul>
+
+  <h2>8. 이용 대상</h2>
+  <p>별짓은 사용자 한 사람이 자신의 계정으로 쓰는 개인용 도구이며, 아동을 대상으로 하지 않습니다.</p>
+
+  <h2>9. 방침의 변경</h2>
+  <p>별짓의 기능이나 데이터 처리 방식이 바뀌면 이 문서를 고치고 시행일을 갱신합니다.</p>
+
+  <h2>10. 문의</h2>
+  <p>이 방침과 별짓의 데이터 처리에 관한 문의: <a href="mailto:moomin6684@gmail.com">moomin6684@gmail.com</a></p>
+
+  <h2>Summary in English</h2>
+  <p>Byeoljit is a personal productivity assistant that a single user runs on their own Mac. When the user connects their Google account, Byeoljit requests <code>gmail.readonly</code>, <code>gmail.compose</code>, <code>calendar.events</code> and <code>calendar.calendarlist.readonly</code> to search and read mail, create mail drafts (it has no feature that sends mail), and read, create and update calendar events, only to carry out tasks the user asks for.</p>
+  <p>OAuth tokens are stored in the macOS login keychain. Records of the work (tool requests and responses, which can include mail and event content, approval records, conversations, documents and database backups) are stored in a local database and folders on the user's Mac. The developer operates no server and does not receive this data. Content needed to perform a task is sent to the AI model provider that powers the assistant (Anthropic or OpenAI, under the user's own account) and to Google's APIs; it is not sold, not used for advertising, and not used by Byeoljit to train AI models.</p>
+  <p>Records are kept until the user deletes them. Disconnecting in Settings removes the stored tokens from the keychain but does not revoke access at Google and does not delete existing local records; the user can revoke access at <a href="https://myaccount.google.com/connections" rel="noopener">myaccount.google.com/connections</a> and delete local records as described in section 6. Byeoljit's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements. Contact: <a href="mailto:moomin6684@gmail.com">moomin6684@gmail.com</a></p>
+</div></main>
+<footer class="site"><div class="wrap">
+  <p>별짓(Byeoljit) · 개인용 업무 보조 도구 · <a href="./">소개</a> · <a href="mailto:moomin6684@gmail.com">moomin6684@gmail.com</a></p>
+</div></footer>
+</body>
+</html>
